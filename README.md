@@ -294,9 +294,16 @@ This project was made possible thanks to the following incredible open-source pr
 
 > **Disclaimer**: This project was developed with the assistance of an AI coding agent. While the code has been thoroughly optimized and structured, please keep this in mind when reviewing the architecture.
 
-> **Tip**: To easily extract and download video files from web pages for use with the streamer, I highly recommend using **[JDownloader](https://jdownloader.org/)**—a free and open-source media download management tool.
-
 > **Media Attribution**: The screenshots shown in this repository feature the 59.94 FPS video *"[Golden sunset over Istanbul's Bosphorus Bridge with boats and seagull.](https://www.pexels.com/tr-tr/video/sunset-over-istanbul-s-bright-bosphorus-bridge-33679193/)"* by **Rahime Gül** on Pexels. Used under the free Pexels license.
 
-### MIT License
-This project is licensed under the MIT License. You are free to use, modify, and distribute it, provided that the original copyright notices are retained.
+### License & Third-Party Dependencies
+
+The source code of **Pico-Cast** is originally licensed under the **MIT License**.
+
+However, this project relies on several third-party open-source libraries and external tools, which are distributed under their respective licenses. By using this software, you must also comply with the following:
+
+1. **arduino-pico (Earle Philhower)**: The underlying Arduino core for the RP2040/RP2350 is licensed under **LGPL-2.1**. By releasing Pico-Cast as open-source, we comply with LGPL requirements (users have the source code and can modify/re-link the firmware). If you distribute pre-compiled `.uf2` binaries of this project commercially, please ensure you comply with the LGPL requirements (such as providing object files or source code upon request).
+2. **FFmpeg** (External Binary via `subprocess`): Usually licensed under **LGPL / GPL**. Our Python script communicates with FFmpeg purely via standard I/O pipes at arm's length (mere aggregation), meaning Pico-Cast's Python source code is not a derivative work and safely remains under MIT.
+3. **JPEGDEC**: Licensed under the **Apache License 2.0**.
+4. **PicoDVI & Pico SDK**: Licensed under the **BSD-3-Clause License**.
+5. **CustomTkinter**: Licensed under the **MIT License**.
